@@ -15,6 +15,7 @@
 		4E87842823846BF70037EDD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E87842623846BF70037EDD9 /* LaunchScreen.storyboard */; };
 		4E87843023846C480037EDD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4E87842F23846C480037EDD9 /* README.md */; };
 		4E87843223846D940037EDD9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E87843123846D940037EDD9 /* SecondViewController.swift */; };
+		4E878435238471260037EDD9 /* PresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E878434238471260037EDD9 /* PresentAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4E87842923846BF70037EDD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E87842F23846C480037EDD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4E87843123846D940037EDD9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		4E878434238471260037EDD9 /* PresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				4E87842423846BF70037EDD9 /* Assets.xcassets */,
 				4E87842623846BF70037EDD9 /* LaunchScreen.storyboard */,
 				4E87842923846BF70037EDD9 /* Info.plist */,
+				4E878434238471260037EDD9 /* PresentAnimator.swift */,
 			);
 			path = "Circular Modal Transition Practice";
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E87843223846D940037EDD9 /* SecondViewController.swift in Sources */,
+				4E878435238471260037EDD9 /* PresentAnimator.swift in Sources */,
 				4E87842023846BF30037EDD9 /* ViewController.swift in Sources */,
 				4E87841C23846BF30037EDD9 /* AppDelegate.swift in Sources */,
 				4E87841E23846BF30037EDD9 /* SceneDelegate.swift in Sources */,

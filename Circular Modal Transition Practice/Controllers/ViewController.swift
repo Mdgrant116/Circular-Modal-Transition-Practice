@@ -22,15 +22,42 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        startButton.layer.cornerRadius = 60 / 2
+        startButton.layer.cornerRadius = startButton.frame.width / CGFloat(2)
     }
     
     @IBAction func showNewVC(_ sender: Any) {
         
-        
+        performSegue(withIdentifier: "ShowNewVC", sender: nil)
         
     }
     
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+        if let destinationVC = segue.destination as? SecondViewController {
+            
+            destinationVC.transitioningDelegate = self
+            
+            
+        }
+    }
+    
+}
+
+extension ViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        
+        let animator = PresentAnimator(buttonFrame: startButton.frame)
+        
+        return animator
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return nil
+    }
+    
 }
 

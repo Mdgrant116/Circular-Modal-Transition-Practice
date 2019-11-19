@@ -18,6 +18,7 @@ class SecondViewController: UIViewController {
     
     @IBAction func hideTapped(_ sender: Any) {
         
+        dismiss(animated: true, completion: nil)
     }
     
 }
