@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,69 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Circular_Modal_Transition_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv1-bc-MfY">
+                                <rect key="frame" x="177" y="712" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.8631207192" blue="0.32702803940000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="IN0-9c-A2a"/>
+                                    <constraint firstAttribute="height" constant="60" id="gUR-wW-ll1"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="showNewVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1U5-Co-iyg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.34659779070000002" green="0.32526928189999998" blue="0.83875387909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pv1-bc-MfY" secondAttribute="bottom" constant="90" id="0oZ-iG-jRd"/>
+                            <constraint firstItem="pv1-bc-MfY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IWN-ub-NkA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="pv1-bc-MfY" id="huB-jM-Ype"/>
+                        <segue destination="l7b-9C-vl3" kind="presentation" identifier="ShowNewVC" id="uC8-bu-cab"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="2Cz-En-EEv">
+            <objects>
+                <viewController id="l7b-9C-vl3" customClass="SecondViewController" customModule="Circular_Modal_Transition_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0g-TH-ggQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZy-TF-nkz">
+                                <rect key="frame" x="166" y="386" width="82" height="70"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="44"/>
+                                <state key="normal" title="Hide">
+                                    <color key="titleColor" red="0.34659779070000002" green="0.32526928189999998" blue="0.83875387909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideTapped:" destination="l7b-9C-vl3" eventType="touchUpInside" id="pmU-iC-Q1O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.8631207191780822" blue="0.32702803938356162" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="AZy-TF-nkz" firstAttribute="centerY" secondItem="U0g-TH-ggQ" secondAttribute="centerY" id="T0g-Kr-OWb"/>
+                            <constraint firstItem="AZy-TF-nkz" firstAttribute="centerX" secondItem="U0g-TH-ggQ" secondAttribute="centerX" id="l6p-qz-Kao"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o5p-cb-6gJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxt-GO-k98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="134"/>
         </scene>
     </scenes>
 </document>

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  Circular Modal Transition Practice
 //
 //  Created by Michael Grant on 11/19/19.
@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
+    @IBAction func hideTapped(_ sender: Any) {
+        
+    }
+    
 }
-
